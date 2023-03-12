@@ -1,0 +1,12 @@
+.navbar{
+    background-color: rgb(86, 86, 255);
+    display: flex;
+    justify-content: space-around;
+
+}
+.card a{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
