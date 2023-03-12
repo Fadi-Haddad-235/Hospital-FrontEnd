@@ -54,8 +54,18 @@ function validate (){
 
         axios.post('http://localhost/Hospital-BackEnd/login.php', data).then(function (res) {
             console.log(res.data);
-            let obj =res.data;
-
+            let token = res.data.jwt;
+            localStorage.setItem('token', token);
+            switch (res.data.usertype) {
+                case 1:
+                    window.location.href = "admin.html";
+                    break;
+                case 2:
+                    window.location.href = "employee.html";
+                    break;
+                case 3:
+                    window.location.href = "patient.html";
+                    break;}
             }).catch(function (err) {
                 console.log(err);
             })
