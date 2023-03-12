@@ -9,8 +9,9 @@ const bottom_section=document.getElementById("bottom-section");
 login_button=document.getElementById("login-button");
 login_button.addEventListener("click",validate);
 
+
 function validatePassword(){
-    if (password.value.length>8 && /[ -/:-@[-`{-~]/.test(password.value) && /[A-Z]/.test(password.value)){
+    if (password.value.length>1 ){
         password_icon.classList.remove("fa-xmark");
         password_icon.classList.add("fa-check");
         password_correct=true;
@@ -46,14 +47,18 @@ function validate (){
     validateEmail();
 
     if (password_correct && email_correct){
-        login_button.innerHTML=`<a  id=login" href="second.html">Log In Now</a>`;
-        bottom_section.classList.add("hidden");
         
-        // code to save the date in an object and then save it to local storage
-        var info_object = {"f_name": fname.value, "l_name": lname.value,
-        "password": password.value, "email": email.value,"number":number.value};
-        localStorage.setItem('myStorage', JSON.stringify(info_object));
-        console.log(info_object);
+        let data = new FormData();
+        data.append('email', email.value);
+        data.append('password', password.value);
+
+        axios.post('http://localhost/Hospital-BackEnd/login.php', data).then(function (res) {
+            console.log(res.data);
+            let obj =res.data;
+
+            }).catch(function (err) {
+                console.log(err);
+            })
     }
     else{
         login_button.classList.toggle("shake");

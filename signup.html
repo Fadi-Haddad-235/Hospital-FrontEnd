@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekend Trip</title>
+    <title>Sign Up</title>
     <link href="CSS/signup.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/43dc3f8d4d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="JavaScript/signup.js"></script>
 </head>
 <body>
@@ -26,30 +27,39 @@
                 <br>
                 <input  type="text" id="fname" name="fname" size="30" autocomplete="off">
             </div>
-            <div class="last-name">
-                <span >Last name</span>
-                <i id="lname-status" class="fa-solid"></i>
+            <div class="year-of-birth">
+                <span >Year Of Birth</span>
+                <i id="yob-status" class="fa-solid"></i>
                 <br>
-                <input type="text" id="lname" name="lname" size="30" autocomplete="off">
+                <input type="text" id="yob" name="yob" size="30" autocomplete="off">
             </div>
             <div class="password">
                 <span >Password</span>
                 <i id="password-status" class="fa-solid"></i>
                 <br>
                 <input type="password" id="password" name="pwd" size="30" autocomplete="off">
+            </div>
             <div class="email">
                 <span >Email</span>
                 <i id="email-status" class="fa-solid"></i>
                 <br>
                 <input type="email" id="email" name="email" size="30" autocomplete="off">
             </div>
-            <div class="number">
-                <span >Phone Number</span>
-                <i id="number-status" class="fa-solid"></i><br>
-                <input type="text" id="number" name="number" size="30" autocomplete="off">
+
+            <div class="category" id="category">
+                <div>Category
+                 <i id="category-status" class="fa-solid"></i>
+                </div>
+
+                <input list="categories" name="category" size="30" autocomplete="off">
+                <datalist id="categories">
+                  <option value="Employee">
+                  <option value="Patient">
+                </datalist>
             </div>
+
             <button class="" type="button" id="signup-button" >Sign Up</button>
-            <div class="bottom-section">
+            <div class="bottom-section" id="bottom-section">
                 <a class="sign-in-text" href="login.html" ><u>Or Sign In</u> </a>
             </div>
 

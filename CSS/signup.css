@@ -23,7 +23,7 @@ body{
       align-items: center;
       justify-content: center;
   }
-  .first-name, .last-name, .password, .email, .number{
+  .first-name, .last-name,.year-of-birth, .password, .email, .category{
       display: block;
       margin:15px 0;
   }
@@ -38,26 +38,31 @@ body{
   .sign-up-text{
       text-align: center;
   }
-  #signup-button ,a #signup-button{
-  width:-webkit-fill-available;
-  background-color:#8f2efd;
-  display:inline-block;
-  padding:0.1em;
-  border:2px solid rgba(255,255,255,0);
-  border-radius:1em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  color:#FFFFFF;
-  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-  text-align:center;
-  transition: all 0.2s;
-  font-size: 25px;
-  }
-  .signup-button:hover{
-      border-color: rgba(255,255,255,1);
-      }
+#signup-button ,a #signup-button{
+/* width:200px; */
+width:200px;
+background-color:#8f2efd;
+display:inline-block;
+padding:0.1em;
+border:2px solid rgba(255,255,255,0);
+border-radius:1em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#FFFFFF;
+text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+text-align:center;
+transition: all 0.2s;
+font-size: 25px;
+}
+#signup-button:hover{
+    border-color: rgba(255,255,255,1);
+    }
+.hidden{
+  display: hidden;
+}
+
   h1{
       font-family: roboto;
   }
@@ -115,12 +120,12 @@ body{
         transform: translate(0);
       }
     }
-.bottom-section{
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 10px;
-}
+
 .bottom-section a{
-color:black
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:10px 0;
+  color:black
   }
