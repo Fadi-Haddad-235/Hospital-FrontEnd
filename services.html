@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/patients.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="JavaScript/services.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Patients</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="card"><img src="Images/patients.png" alt=""><a href="patients.html">Patients</a></div>
+        <div class="card"><img src="Images/employees.png" alt=""><a href="employees.html">Epmloyees</a></div>
+        <div class="card"><img src="Images/services.png" alt=""><a href="services.html">Services</a></div>
+    </div>
+
+
+        <div><h1>Patients' requested services</h1></div>
+        <div id="assign-form">
+            <label for="user">select patient:</label>
+            <select id="user" name="patientId"></select>
+            <br><br>
+            <label for="hospital">select service:</label>
+            <select id="service" name="serviceId"></select>
+            <br><br>
+            <button type="submit" id="agree">agree</button>
+            <button type="submit" id="decline">decline</button>
+</div>
+    </div>
+
+      
+</body>
+</html>
+
+    
+
+
+
+
