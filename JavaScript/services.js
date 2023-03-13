@@ -21,9 +21,9 @@ window.onload=function(){
       const serviceId = document.getElementById('service').value;
       const data = {patient_id: patientId, service_id: serviceId, status: status};
   
-      axios.post('http://localhost/Hospital-BackEnd/assign_service.php', data)
+      axios.post('http://localhost/Hospital-BackEnd/assign_services_to_users.php', data)
         .then(response => {
-        
+        console.log(response);
         })
         .catch(error => {
           console.error(error);
